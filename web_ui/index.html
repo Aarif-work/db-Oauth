@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Auth App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="auth-card">
+            <h1>Sign In</h1>
+            <div id="g_id_onload"
+                 data-client_id="964113780245-bkk2i4tf7ih5joqvltkg2ma63lodks20.apps.googleusercontent.com"
+                 data-callback="handleCredentialResponse">
+            </div>
+            <div class="g_id_signin" data-type="standard"></div>
+            <div id="user-info" class="user-info hidden">
+                <h2>Welcome!</h2>
+                <p id="user-name"></p>
+                <p id="user-email"></p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="script.js"></script>
+</body>
+</html>

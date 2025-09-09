@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Google Auth App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2><i class="fas fa-shield-alt"></i> Auth App</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item active"><i class="fas fa-home"></i> Dashboard</li>
+                <li class="nav-item"><i class="fas fa-users"></i> Users</li>
+                <li class="nav-item"><i class="fas fa-chart-bar"></i> Analytics</li>
+                <li class="nav-item"><i class="fas fa-cog"></i> Settings</li>
+            </ul>
+        </nav>
+        
+        <main class="main-content">
+            <header class="top-header">
+                <div class="header-left">
+                    <h1>Welcome Back!</h1>
+                    <p>Here's what's happening with your account today.</p>
+                </div>
+                <div class="header-right">
+                    <div class="user-menu">
+                        <img id="user-avatar" src="" alt="User Avatar" class="header-avatar">
+                        <span id="user-name"></span>
+                        <button id="logout-btn" class="logout-btn"><i class="fas fa-sign-out-alt"></i></button>
+                    </div>
+                </div>
+            </header>
+            
+            <div class="dashboard-grid">
+                <div class="stats-row">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-users"></i></div>
+                        <div class="stat-info">
+                            <h3>Total Users</h3>
+                            <p id="total-users">Loading...</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-clock"></i></div>
+                        <div class="stat-info">
+                            <h3>Login Time</h3>
+                            <p id="login-time"></p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-calendar"></i></div>
+                        <div class="stat-info">
+                            <h3>Member Since</h3>
+                            <p id="member-since">Today</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-shield-check"></i></div>
+                        <div class="stat-info">
+                            <h3>Account Status</h3>
+                            <p class="status-active">Active</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="content-row">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-user-circle"></i> Profile Information</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="profile-info">
+                                <div class="info-item">
+                                    <label>Full Name:</label>
+                                    <span id="profile-name"></span>
+                                </div>
+                                <div class="info-item">
+                                    <label>Email Address:</label>
+                                    <span id="profile-email"></span>
+                                </div>
+                                <div class="info-item">
+                                    <label>Authentication Method:</label>
+                                    <span class="auth-method"><i class="fab fa-google"></i> Google OAuth 2.0</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-list"></i> Recent Activity</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="activity-list">
+                                <div class="activity-item">
+                                    <i class="fas fa-sign-in-alt activity-icon"></i>
+                                    <div class="activity-content">
+                                        <p>Logged in successfully</p>
+                                        <small id="activity-time"></small>
+                                    </div>
+                                </div>
+                                <div class="activity-item">
+                                    <i class="fas fa-user-check activity-icon"></i>
+                                    <div class="activity-content">
+                                        <p>Profile verified via Google</p>
+                                        <small>Just now</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="dashboard.js"></script>
+</body>
+</html>
