@@ -7,6 +7,8 @@ rust_api/.env
 web_ui/node_modules/
 web_ui/.env
 web_ui/dist/
+web_ui/server.py
+web_ui/run.bat
 
 # Database
 *.sql.backup
